@@ -1,0 +1,63 @@
+CentOS 7:
+https://github.com/mishamosher/CentOS-WSL/releases/tag/8.4-2105
+-Extract all to c:\apps
+-Run CentOS7 as administrator
+-Run CentOS7 as administrator again
+
+-ATRT EXISTING SOFTWARE SETUP
+[root@JLAP]# yum -y update
+[root@JLAP]# sudo yum install nano
+[root@JLAP]# sudo yum install python27
+[root@JLAP]# sudo yum install wireshark
+[root@JLAP]# sudo yum install wireshark-gnome
+[root@JLAP]# sudo yum install pygtk2
+[root@JLAP]# sudo yum install gtk2
+[root@JLAP]# sudo yum install gtk2-devel
+[root@JLAP]# sudo yum install gtk3
+[root@JLAP]# sudo yum install xorg-x11-apps
+
+-ADD USER WITH PRIVILIGES
+[root@JLAP]# useradd jjs22
+[root@JLAP]# passwd jjs22
+[root@JLAP]# usermod -aG wheel username
+
+-SETUP DISPLAY
+[jjs22@StearnsDesktop ~]$ vi .bashrc
+Add line to end: export DISPLAY=192.168.1.111:0.0
+
+INSTALL WHEEL:
+Repo: https://files.pythonhosted.org/packages/27/d6/003e593296a85fd6ed616ed962795b2f87709c3eee2bca4f6d0fe55c6d00/wheel-0.37.1-py2.py3-none-any.whl
+[jjs22@StearnsDesktop ~]$ sudo pip2 install wheel
+
+INSTALL TAR FROM SETUP.PY:
+[jjs22@StearnsDesktop ~]$ sudo python2.7 setup.py install
+
+INSTALL WHEEL FILE:
+[jjs22@StearnsDesktop ~]$ python2 pip-10.0.1-py2.py3-none-any.whl/pip install --no-index PySimpleGUI27-2.4.1-py3-none-any.whl
+
+PowerShell:
+c:\Apps\CentOS7> CentOS7.exe config --default-user jjs22
+
+$ sudo yum list installed|more
+$ yum install wireshark
+
+Python Installed Modules:
+$ python2.7
+>>> help("modules")
+
+INSTALL PYSHARK & DEPENDENCIES:
+
+TarBalls or Wheels:
+pyshark-legacy-0.3.8.tar.gz
+trollius-2.1-py2-none-any.whl
+Logbook-1.5.3.tar.gz
+py-1.11.0-py2.py3-none-any.whl
+
+[jjs22...] tar xvf pyshark-legacy-0.3.8.tar.gz
+[jjs22...] cd pyshark-legacy-0.3.8
+[jjs22...] sudo python setup.py install
+[jjs22...] sudo python setup.py install
+
+Offline Wheel Failure:
+Could not find a version that satisfies the requirement futures /simple/futures
+
