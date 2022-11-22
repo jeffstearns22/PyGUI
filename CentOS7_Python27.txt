@@ -61,3 +61,8 @@ py-1.11.0-py2.py3-none-any.whl
 Offline Wheel Failure:
 Could not find a version that satisfies the requirement futures /simple/futures
 
+ActiveTcl:
+% ./configure --with-tcltk-includes='-I/opt/ActiveTcl-8.6/include'
+       --with-tcltk-libs='/opt/ActiveTcl-8.6/lib/libtcl8.6.so /opt/ActiveTcl-8.6/lib/libtk8.6.so'
+% make
+% make altinstall
