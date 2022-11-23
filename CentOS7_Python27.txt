@@ -63,6 +63,27 @@ Could not find a version that satisfies the requirement futures /simple/futures
 
 ActiveTcl:
 % ./configure --with-tcltk-includes='-I/opt/ActiveTcl-8.6/include' --with-tcltk-libs='-L/opt/ActiveTcl-8.6/lib'
+              --enable-optimizations
        #--with-tcltk-libs='-L/opt/ActiveTcl-8.6/lib/libtcl8.6.so /opt/ActiveTcl-8.6/lib/libtk8.6.so'
 % make
 % make altinstall
+
+configure:10302: checking for --with-tcltk-includes
+configure:10312: result: default
+configure:10314: checking for --with-tcltk-libs
+configure:10324: result: default
+
+INFO: Can't locate Tcl/Tk libs and/or headers
+warning: building with the bundled copy of libffi is deprecated on this platform.  It will not be distributed with Python 3.7
+
+Python build finished successfully!
+The necessary bits to build these optional modules were not found:
+_bz2                  _curses               _curses_panel
+_dbm                  _gdbm                 _lzma
+_sqlite3              _ssl                  _tkinter
+readline
+To find the necessary bits, look in setup.py in detect_modules() for the module's name.
+
+The following modules found by detect_modules() in setup.py, have been
+built by the Makefile instead, as configured by the Setup files:
+atexit                pwd                   time
