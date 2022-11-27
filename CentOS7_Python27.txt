@@ -87,3 +87,5 @@ To find the necessary bits, look in setup.py in detect_modules() for the module'
 The following modules found by detect_modules() in setup.py, have been
 built by the Makefile instead, as configured by the Setup files:
 atexit                pwd                   time
+
+sudo yum localinstall libffi-devel-3.0.13-19.el7.x86_64.rpm
