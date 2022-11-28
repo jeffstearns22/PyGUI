@@ -63,6 +63,7 @@ Could not find a version that satisfies the requirement futures /simple/futures
 
 ActiveTcl:
 % ./configure --with-tcltk-includes='-I/opt/ActiveTcl-8.6/include' --with-tcltk-libs='-L/opt/ActiveTcl-8.6/lib' --with-openssl=/opt/openssl
+              LDFLAGS='-L/opt/openssl/lib' CFLAGS='-=I/opt/openssl/include,-Wl,-rpath,/opt/openssl/lib'
               --enable-optimizations
        #--with-tcltk-libs='-L/opt/ActiveTcl-8.6/lib/libtcl8.6.so /opt/ActiveTcl-8.6/lib/libtk8.6.so'
 % make
