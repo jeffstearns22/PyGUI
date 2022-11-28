@@ -62,7 +62,7 @@ Offline Wheel Failure:
 Could not find a version that satisfies the requirement futures /simple/futures
 
 ActiveTcl:
-% ./configure --with-tcltk-includes='-I/opt/ActiveTcl-8.6/include' --with-tcltk-libs='-L/opt/ActiveTcl-8.6/lib'
+% ./configure --with-tcltk-includes='-I/opt/ActiveTcl-8.6/include' --with-tcltk-libs='-L/opt/ActiveTcl-8.6/lib' --with-openssl=/opt/openssl
               --enable-optimizations
        #--with-tcltk-libs='-L/opt/ActiveTcl-8.6/lib/libtcl8.6.so /opt/ActiveTcl-8.6/lib/libtk8.6.so'
 % make
@@ -89,3 +89,5 @@ built by the Makefile instead, as configured by the Setup files:
 atexit                pwd                   time
 
 sudo yum localinstall libffi-devel-3.0.13-19.el7.x86_64.rpm
+
+./config --prefix=/opt/openssl --openssldir=/usr/local/ssl
